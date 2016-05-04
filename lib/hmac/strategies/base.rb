@@ -197,7 +197,7 @@ module Warden
 
           def timestamp
             # Time.strptime(request_timestamp, '%a, %e %b %Y %T %z') unless request_timestamp.nil? || request_timestamp.empty?
-            Time.at(request_timestamp) unless request_timestamp.nil? || request_timestamp.empty?
+            Time.at(request_timestamp.to_i) unless request_timestamp.nil? || request_timestamp.empty?
           end
 
           def has_timestamp?
